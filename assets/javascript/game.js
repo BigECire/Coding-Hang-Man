@@ -52,6 +52,10 @@ document.onkeyup = function (event) {
             alert("You Win!")
             reset()
         }
+        if(guess === 0){
+            alert("You Lose! The answer was " + theWord)
+            reset()
+        }
 
         console.log(emptyWord + " " + guess)
     };
