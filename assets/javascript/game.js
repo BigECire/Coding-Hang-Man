@@ -48,6 +48,11 @@ document.onkeyup = function (event) {
         used = false
         emptyWord = word
 
+        if(emptyWord === theWord){
+            alert("You Win!")
+            reset()
+        }
+
         console.log(emptyWord + " " + guess)
     };
 };
