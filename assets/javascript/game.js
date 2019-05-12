@@ -1,5 +1,5 @@
 
-var wordBank = ["abcdefghi jklmnopqrs tuvwxyz", "javascript"]
+var wordBank = ["array", "javascript", "function", "hyper text markup language", "cascading style sheets", "scope", "rubber duck debugging", "jquery", "bootstrap"]
 var theWord = ""
 var emptyWord = ""
 var guessedLetters = ""
@@ -8,6 +8,7 @@ var used = false
 var guess = 6
 var win = 0
 var lose = 0
+var image = ["assets/images/Guess1.png", "assets/images/Guess2.png", "assets/images/Guess3.png", "assets/images/Guess4.png", "assets/images/Guess5.png", "assets/images/Guess6.png", ]
 
 function startUp() {
     theWord = wordBank[Math.floor(Math.random() * wordBank.length)]
@@ -19,8 +20,7 @@ function startUp() {
             emptyWord += "_"
         }
     };
-    console.log(theWord)
-    console.log(emptyWord)
+    $("#word").text(emptyWord)
 }
 
 function reset() {
@@ -28,6 +28,9 @@ function reset() {
      emptyWord = ""
      guessedLetters = ""
      guess = 6
+     $(".image").attr("src", "assets/images/Guess0.png")
+     $("#guessLeft").text("6 Guesses Remaining")
+    $("#wrongGuess").text("")
     
     startUp()
 }
@@ -61,19 +64,23 @@ else {
         if ((!used) && (!repeat)) {
             guess = guess - 1
             guessedLetters += playerkey.toUpperCase() + " "
-            console.log(guessedLetters)
+            $("#guessLeft").text(guess + " Guesses Remaining")
+            $("#wrongGuess").text(guessedLetters)
+            $(".image").attr("src", image[5 - guess])
         }
         used = false
         emptyWord = word
-console.log(emptyWord + " " + guess)
+        $("#word").text(emptyWord)
         if(emptyWord === theWord){
             alert("You Win!")
             win++
+            $("#scoreWin").text("Wins: " + win)
             reset()
         }
         if(guess === 0){
             alert("You Lose! The answer was " + theWord)
             lose++
+            $("#scoreLose").text("Loses: " + lose)
             reset()
         }
 
