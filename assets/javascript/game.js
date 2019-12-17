@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 
 var wordBank = ["array", "javascript", "function", "hyper text markup language", "cascading style sheets", "scope", "rubber duck debugging", "jquery", "bootstrap"]
 var theWord = ""
@@ -70,12 +72,12 @@ else {
         }
         used = false
         emptyWord = word
-        $("#word").text(emptyWord)
+         $("#word").text(emptyWord)
         if(emptyWord === theWord){
             alert("You Win!")
             win++
             $("#scoreWin").text("Wins: " + win)
-            reset()
+             reset()
         }
         if(guess === 0){
             alert("You Lose! The answer was " + theWord)
@@ -88,3 +90,4 @@ else {
     };
 }
 };
+});
