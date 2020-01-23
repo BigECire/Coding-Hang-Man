@@ -8,4 +8,7 @@ When you open the page of this game, it will randomly select a word within its w
 
 If you would like to play this game, go to the following link:  [Here](https://bigecire.github.io/Coding-Hang-Man/)
 
+## Technology Used
+HTML, CSS, JavaScript, jQuery, and Bootstrap
+
 Eric Sanders is the full stack developer of this project.
