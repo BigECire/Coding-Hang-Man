@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-    var wordBank = ["array", "React", "MongoDB", "javascript", "function", "hyper text markup language", "cascading style sheets", "scope", "rubber duck debugging", "jquery", "bootstrap"]
+    var wordBank = ["array", "React", "MongoDB", "Javascript", "function", "Hyper Text Markup Language", "Cascading Style Sheets", "scope", "rubber duck debugging", "JQuery", "Bootstrap"]
     var theWord = ""
     var emptyWord = ""
     var guessedLetters = ""
