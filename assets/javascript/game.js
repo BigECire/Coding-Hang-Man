@@ -74,7 +74,7 @@ $(document).ready(function () {
                 emptyWord = word
                 $("#word").text(emptyWord)
                 if (emptyWord === theWord) {
-                    alert("You Win!")
+                    setInterval(alert("You Win!"), 1000)
                     win++
                     $("#scoreWin").text("Wins: " + win)
                     setInterval(reset(), 1000)
