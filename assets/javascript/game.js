@@ -37,7 +37,9 @@ $(document).ready(function () {
         startUp()
     }
 
-
+    window.addEventListener('load', () => {
+        console.log("yes")
+      })
     document.onkeyup = function (event) {
         var playerkey = event.key.toLowerCase();
         var word = ""
@@ -74,7 +76,7 @@ $(document).ready(function () {
                 emptyWord = word
                 $("#word").text(emptyWord)
                 if (emptyWord === theWord) {
-                    setInterval(alert("You Win!"), 1000)
+                    setInterval(alert("You Win!"), 4000)
                     win++
                     $("#scoreWin").text("Wins: " + win)
                     setInterval(reset(), 1000)
