@@ -79,7 +79,7 @@ $(document).ready(function () {
                     setInterval(alert("You Win!"), 4000)
                     win++
                     $("#scoreWin").text("Wins: " + win)
-                    setInterval(reset(), 1000)
+                    setInterval(reset(), 5000)
                     
                 }
                 if (guess === 0) {
