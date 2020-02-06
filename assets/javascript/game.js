@@ -37,6 +37,12 @@ $(document).ready(function () {
         startUp()
     }
 
+    function delay() {
+        setInterval(reset(), 5000)
+
+        startUp()
+    }
+
     window.addEventListener('load', () => {
         console.log("yes")
       })
@@ -79,7 +85,7 @@ $(document).ready(function () {
                     setInterval(alert("You Win!"), 4000)
                     win++
                     $("#scoreWin").text("Wins: " + win)
-                    setInterval(reset(), 5000)
+                    setInterval(delay(), 5000)
                     
                 }
                 if (guess === 0) {
