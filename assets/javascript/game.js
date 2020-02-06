@@ -77,7 +77,8 @@ $(document).ready(function () {
                     alert("You Win!")
                     win++
                     $("#scoreWin").text("Wins: " + win)
-                    reset()
+                    setInterval(reset(), 1000)
+                    
                 }
                 if (guess === 0) {
                     alert("You Lose! The answer was " + theWord)
